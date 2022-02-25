@@ -21,11 +21,11 @@ public class Bronze13300 {
 			int gender = Integer.parseInt(st.nextToken());
 			int grade = Integer.parseInt(st.nextToken());
 
-			arr[gender][grade-1] += 1;
+			arr[gender][grade-1] += 1; // 우선 학생 집어 넣
 			
-			if(arr[gender][grade-1]==1) {
+			if(arr[gender][grade-1]==1) { // 학생을 넣은 방에 인원이 1이면 0명에서 1이된거라 방이 새로생긴거니까 방 갯수 추가
 				roomCount++;
-			}else if (arr[gender][grade-1] > K) {
+			}else if (arr[gender][grade-1] > K) { // 각 방의 인원제한 K 보다 크다면 
 				arr[gender][grade-1] -= K;
 				roomCount++;
 			}
